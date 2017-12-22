@@ -8,6 +8,7 @@ import android.coolweather.com.coolweather.db.Province;
 import android.coolweather.com.coolweather.util.HttpUtil;
 import android.coolweather.com.coolweather.util.Utility;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,38 +25,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import okhttp3.Call;
+import okhttp3.Callback;
 import okhttp3.Response;
-
-        import android.app.ProgressDialog;
-        import android.content.Intent;
-        import android.os.Bundle;
-        import android.support.v4.app.Fragment;
-        import android.util.Log;
-        import android.view.LayoutInflater;
-        import android.view.View;
-        import android.view.ViewGroup;
-        import android.widget.AdapterView;
-        import android.widget.ArrayAdapter;
-        import android.widget.Button;
-        import android.widget.ListView;
-        import android.widget.TextView;
-        import android.widget.Toast;
-
-import android.coolweather.com.coolweather.db.City;
-import android.coolweather.com.coolweather.db.County;
-import android.coolweather.com.coolweather.db.Province;
-import android.coolweather.com.coolweather.util.HttpUtil;
-import android.coolweather.com.coolweather.util.Utility;
-
-        import org.litepal.crud.DataSupport;
-
-        import java.io.IOException;
-        import java.util.ArrayList;
-        import java.util.List;
-
-        import okhttp3.Call;
-        import okhttp3.Callback;
-        import okhttp3.Response;
 
 public class ChooseAreaFragment extends Fragment {
 
@@ -148,6 +120,7 @@ public class ChooseAreaFragment extends Fragment {
                         activity.requestWeather(weatherId);
                     }
                 }
+
             }
         });
         backButton.setOnClickListener(new View.OnClickListener() {
